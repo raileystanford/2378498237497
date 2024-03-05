@@ -1,0 +1,241 @@
+@use '../scss/normalize.scss' as *;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// Header
+.header {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid silver;
+    box-shadow: 0px 0px 10px grey;
+    background: rgba(192, 192, 192, 0.2);
+    margin-bottom: 30px;
+
+    &__title {
+        text-align: center;
+        color: blue;
+        user-select: none;
+    }
+}
+
+//Counters
+.counters-wrapper {
+    padding: 10px;
+}
+
+.counters {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid silver;
+    box-shadow: 0px 0px 3px silver;
+    border-radius: 8px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.c-section {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s;
+    gap: 0px;
+    cursor: pointer;
+
+    &:not(.open):hover {
+        background: rgba(192, 192, 192, 0.2);
+    }
+
+    &.open {
+        gap: 25px;
+        cursor: auto;
+    }
+
+    &__info {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+        align-items: center;
+        position: relative;
+        pointer-events: none;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: red;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            transition: 0.4s;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &.open::after {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    
+    &__img {
+        width: 30px;
+        height: 30px;
+        transition: 0.5s;
+
+        &.open {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__title {
+        font-family: Arial;
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+.o-p-calculator {
+    width: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+
+    &.open {
+        height: 260px;
+        opacity: 1;
+    }
+
+    &__title {
+        font-size: 25px;
+        user-select: none;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__wrapper2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .button-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__numbers {
+        display: flex;
+        gap: 10px;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 6px;
+
+        LABEL {
+            cursor: pointer;
+        }
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 160px;
+    }
+
+    &__input {
+        border: 1px solid silver;
+        padding: 3px;
+
+        &.error {
+            outline: 2px solid red;
+            outline-offset: -1px;
+        }
+    }
+
+    &__tumblers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 6px;
+
+        .o-p-calculator__field1 {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+
+            & * {
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+
+    &__submit, &__reset {
+        font-weight: 600;
+        font-size: 15px;
+        width: 100%;
+        padding: 5px;
+        color: white;
+        cursor: pointer;
+        background: rgb(50, 205, 50);
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+
+        &:not(.o-p-calculator__reset):active {
+            background: darken(limegreen, 20%);
+        }
+    }
+
+    &__reset {
+        background: rgb(249, 29, 29); 
+
+        &:active {
+            background: darken(rgb(249, 29, 29), 20%);
+        }
+    }
+
+    &__output {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+
+        .o-p-calculator__result {
+            border-collapse: collapse;
+
+            & TH,TD {
+                border: 1px solid black;
+                padding: 6px;
+                text-align: center;
+            }
+
+            & TH {
+                user-select: none;
+            }
+        }
+    }
+}

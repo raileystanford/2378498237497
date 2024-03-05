@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradetool</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1 class="header__title">TRADE-TOOL</h1>
+    </div>
+
+    </div>
+
+    <div class="counters-wrapper">
+        <div class="counters">
+
+            <div class="c-section" data-info="open">
+
+                <div class="c-section__info">
+                    <img src="image/down-arrow.svg" class="c-section__img">
+                    <p class="c-section__title">ОТКРЫТИЕ ПОЗИЦИИ</p>
+                </div>
+
+                <div class="o-p-calculator">
+                    
+                    <div class="o-p-calculator__inputs">
+
+                        <p class="o-p-calculator__title">Исходные параметры</p>
+
+                        <div class="o-p-calculator__wrapper">
+                            <div class="o-p-calculator__wrapper2">
+
+                                <div class="o-p-calculator__numbers">
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input1">Цена входа</label>
+                                        <input type="number" class="o-p-calculator__input" id="input1">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input2">Сума входа</label>
+                                        <input type="number" class="o-p-calculator__input" id="input2">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input3">Плечо</label>
+                                        <input type="number" class="o-p-calculator__input" value='20' disabled id="input3">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input4">Процент стопа</label>
+                                        <input type="number" class="o-p-calculator__input" value="15" disabled id="input4">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input5">Множитель профита</label>
+                                        <input type="number" class="o-p-calculator__input" value="2" disabled id="input5">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input6">Баланс депозита</label>
+                                        <input type="number" class="o-p-calculator__input" value="45" disabled id="input6">
+                                    </div>
+
+                                </div>
+
+                                <div class="button-wrapper">
+                                    <button class="o-p-calculator__submit">РАСЧИТАТЬ</button>
+                                    <button class="o-p-calculator__reset">ОЧИСТИТЬ</button>
+                                </div>
+                                
+                            </div>
+
+                            <div class="o-p-calculator__tumblers">
+
+                                <div class="o-p-calculator__field1">
+                                    <input type="radio" name="ass" id="check2" checked>
+                                    <label for="check2">Лонг</label>
+                                </div>
+
+                                <div class="o-p-calculator__field1">
+                                    <input type="radio" name="ass" id="check3">
+                                    <label for="check3">Шорт</label>
+                                </div>
+
+                                <div class="o-p-calculator__field1">
+                                    <input type="checkbox" name="" id="check1">
+                                    <label for="check1">Изменить параметры</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="o-p-calculator__output">
+
+                        <p class="o-p-calculator__title">Результат</p>
+
+                        <table class="o-p-calculator__result">
+                            <tr>
+                                <th>Цена входа</th>
+                                <th>Направление</th>
+                                <th>Сума входа</th>
+                                <th>Плечо</th>
+                                <th>Цена профит</th>
+                                <th>Цена стоп</th>
+                                <th>Сума профита</th>
+                                <th>Сума лоса</th>
+                                <th>Общая комисия</th>
+                                <th>Баланс депозита</th>
+                            </tr>
+                            <tr>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="c-section" data-info="open" id="sec2">
+
+                <div class="c-section__info">
+                    <img src="image/down-arrow.svg" class="c-section__img">
+                    <p class="c-section__title">РАСЧЕТ КОЛИЧЕСТВА СТАВОК</p>
+                </div>
+
+                <div class="o-p-calculator" id="calc2">
+                    
+                    <div class="o-p-calculator__inputs">
+
+                        <p class="o-p-calculator__title">Исходные параметры</p>
+
+                        <div class="o-p-calculator__wrapper">
+                            <div class="o-p-calculator__wrapper2">
+
+                                <div class="o-p-calculator__numbers">
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input1">Начальная ставка</label>
+                                        <input type="number" class="o-p-calculator__input" id="input11" value="0.50">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input3">Плечо</label>
+                                        <input type="number" class="o-p-calculator__input" id="input12" value="20">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input2">Множитель</label>
+                                        <input type="number" class="o-p-calculator__input" id="input21" value="60">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input2">Процент стопа</label>
+                                        <input type="number" class="o-p-calculator__input" id="input211" value="15">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input2">Множитель профита</label>
+                                        <input type="number" class="o-p-calculator__input" id="input2111" value="2">
+                                    </div>
+
+                                    <div class="o-p-calculator__field">
+                                        <label for="input3">Баланс</label>
+                                        <input type="number" class="o-p-calculator__input" id="input31" value="45">
+                                    </div>
+
+                                </div>
+
+                                <div class="button-wrapper">
+                                    <button class="o-p-calculator__submit" id="sub1">РАСЧИТАТЬ</button>
+                                    <button class="o-p-calculator__reset" id="res1">ОЧИСТИТЬ</button>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="o-p-calculator__output">
+
+                        <p class="o-p-calculator__title">Результат</p>
+
+                        <table class="o-p-calculator__result" id="table1">
+                            <tr>
+                                <th>№</th>
+                                <th>Сума ставки</th>
+                                <th>Плечо</th>
+                                <th>Множитель</th>
+                                <th>Обьем</th>
+                                <th>Сума комисий</th>
+                                <th>Лос/Вин</th>
+                                <th>Депозит</th>
+                            </tr>
+                            <tr>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="js/index.js"></script>
+
+</body>
+</html>

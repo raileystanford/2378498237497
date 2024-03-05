@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+INPUT[type=number]::-webkit-inner-spin-button, INPUT[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+INPUT {
+    border: none;
+    padding: 0px;
+    outline: none;
+    margin: 0;
+}
+
+BODY, HTML, H1, H2, P {
+    padding: 0;
+    margin: 0;
+}
+
+BUTTON {
+    border: none;
+    padding: 0;
+}
+
+TD, TH {
+    padding: 0;
+}
